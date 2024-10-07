@@ -23,7 +23,7 @@ def get_diagnostic_info():
 
 def record_train_diagnostics(data, iter):
     file = get_diagnostic_dir() / f"{iter:06}.json"
-    file.write_text(data)
+    file.write_text(data, encoding='utf-8') #correction
 
 def format_example_sentence(source, target, hypothesis_beam, iter):
     hypotheses = [
